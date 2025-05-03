@@ -313,3 +313,25 @@ h1 {
         padding: 20px;
     }
 }
+
+/* Footer styles */
+.footer {
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+}
+
+.footer a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #388e3c;
+    text-decoration: underline;
+}
