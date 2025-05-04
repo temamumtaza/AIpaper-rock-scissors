@@ -17,6 +17,7 @@ const resultModal = document.getElementById('result-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalMessage = document.getElementById('modal-message');
 const playAgainButton = document.getElementById('play-again-btn');
+const closeModalButton = document.getElementById('close-modal');
 
 // Game state
 let model;
@@ -397,6 +398,9 @@ resetButton.addEventListener('click', resetGame);
 playAgainButton.addEventListener('click', () => {
     resultModal.classList.add('hidden');
     startGame();
+});
+closeModalButton.addEventListener('click', () => {
+    resultModal.classList.add('hidden');
 });
 
 // Initialize the application when the page loads
