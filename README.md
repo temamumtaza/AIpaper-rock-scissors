@@ -1,38 +1,51 @@
-# Paper-Rock-Scissors AI Game
+# Camera Paper-Rock-Scissors AI Game
 
-An interactive web application that uses your webcam to play the classic Paper-Rock-Scissors game against an AI opponent.
-
-## Features
-
-* Real-time hand gesture detection using TensorFlow.js and the Handpose model
-* Recognition of three gestures: rock, paper, and scissors
-* Random AI opponent selection
-* Score tracking across a 3-round game
-* Interactive countdown timer
-* Victory and defeat animations
-* Responsive design for various screen sizes
+An interactive web application that uses your webcam to play the classic Paper-Rock-Scissors game against an AI opponent. This project leverages TensorFlow.js and the Handpose model to detect hand gestures in real-time.
 
 ## Live Demo
 
-This project is deployed on GitHub Pages and can be accessed here: [https://temamumtaza.github.io/AIpaper-rock-scissors/](https://temamumtaza.github.io/AIpaper-rock-scissors/)
+Play the game here: [https://temamumtaza.github.io/camera-paper-rock-scissors/](https://temamumtaza.github.io/camera-paper-rock-scissors/)
+
+## Features
+
+* **Real-time hand gesture detection** using TensorFlow.js and the Handpose model
+* **3-round game structure** with score tracking
+* **Interactive countdown timer** (3 seconds) for showing gestures
+* **Victory and defeat animations**:
+  * Colorful fireworks for winning
+  * Rain animation for losing
+* **Clean, responsive UI** that works on various screen sizes
+* **Easy-to-use controls** with Start Game and Reset buttons
 
 ## How It Works
 
 1. The application accesses your webcam (with permission)
 2. It uses the TensorFlow.js Handpose model to detect hand landmarks
-3. Custom gesture recognition algorithms identify if you're showing rock, paper, or scissors
-4. When a gesture is detected during countdown, the AI randomly selects its move
-5. The winner is determined and the score is updated
-6. After 3 rounds, an overall winner is declared with special animations
+3. Custom gesture recognition algorithms identify rock, paper, or scissors gestures
+4. A 3-second countdown gives you time to show your gesture
+5. The AI randomly selects its move
+6. Winners are determined for each round and after all 3 rounds
+7. Special animations display based on the final result
+
+## Tech Stack
+
+* **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+* **AI/ML**: TensorFlow.js, Handpose model
+* **Animation**: Canvas Confetti for fireworks, CSS animations
+* **Deployment**: GitHub Pages
 
 ## Getting Started
 
-### Running Locally
+### Play Online
+
+Visit the [live demo](https://temamumtaza.github.io/camera-paper-rock-scissors/) to play immediately.
+
+### Run Locally
 
 1. Clone this repository:
    ```
-   git clone https://github.com/temamumtaza/AIpaper-rock-scissors.git
-   cd AIpaper-rock-scissors
+   git clone https://github.com/temamumtaza/camera-paper-rock-scissors.git
+   cd camera-paper-rock-scissors
    ```
 
 2. Start a local server using one of these methods:
@@ -44,35 +57,62 @@ This project is deployed on GitHub Pages and can be accessed here: [https://tema
    The application will open automatically in your default web browser.
 
    **Using any HTTP server:**
-   Start any HTTP server in the project directory and open the application in your web browser.
+   If you have Node.js installed:
+   ```
+   npx http-server
+   ```
+   Then open `http://localhost:8080` in your browser.
 
-## Usage Instructions
+## How to Play
 
 1. Allow camera access when prompted
-2. Press "Start Game" to begin the 3-round match
-3. When the countdown appears, show your hand gesture (rock, paper, or scissors)
-4. The AI will randomly choose its gesture
-5. Win 2 out of 3 rounds to become the champion!
-6. Use the "Reset Game" button or "Play Again" to start over
+2. Press "Start Game" to begin a 3-round match
+3. When the countdown appears, make your gesture:
+   * **Rock**: Make a fist
+   * **Paper**: Open your hand with fingers extended
+   * **Scissors**: Extend only your index and middle fingers
+4. After 3 rounds, see if you've beaten the AI!
+5. Enjoy special animations based on your victory or defeat
+6. Click "Play Again" or the close button to restart
 
-## Gestures
+## Project Structure
 
-* **Rock**: Make a fist
-* **Paper**: Open your hand with fingers extended
-* **Scissors**: Extend only your index and middle fingers
-
-## GitHub Pages Deployment
-
-This project is set up to automatically deploy to GitHub Pages when changes are pushed to the main branch. The deployed version will be available at: https://[your-username].github.io/AIpaper-rock-scissors/
+```
+camera-paper-rock-scissors/
+│
+├── index.html          # Main HTML structure
+├── style.css           # Styling and animations
+├── script.js           # Game logic and AI
+├── server.py           # Simple Python server for local testing
+└── README.md           # Project documentation
+```
 
 ## Troubleshooting
 
-* **Camera not working**: Make sure you've granted camera permissions to the application
-* **Gestures not recognized**: Try adjusting your hand position or lighting
-* **Slow performance**: The application requires a decent amount of processing power for hand detection. Close other applications to improve performance.
+* **Camera not working**: Make sure you've granted camera permissions
+* **Gestures not recognized**: Try adjusting your hand position, lighting, or distance from camera
+* **Slow performance**: The hand detection requires processing power - close other apps if needed
+* **Mobile devices**: For best results, use a device with a good front-facing camera
+
+## Future Enhancements
+
+Potential features for future versions:
+* Enhanced gesture recognition accuracy
+* More detailed hand visualization
+* Difficulty levels for the AI
+* Multiplayer support
+* Customizable gestures
 
 ## Credits
 
 * TensorFlow.js: https://www.tensorflow.org/js
 * Handpose model: https://github.com/tensorflow/tfjs-models/tree/master/handpose
 * Canvas Confetti: https://github.com/catdad/canvas-confetti
+
+## License
+
+MIT License
+
+## Author
+
+[@temamumtaza](https://github.com/temamumtaza) - Built with ❤️ in 2025
